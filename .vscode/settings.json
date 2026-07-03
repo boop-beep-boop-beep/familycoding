@@ -1,0 +1,15 @@
+{
+  "editor.fontSize": 16,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "workbench.tips.enabled": false,
+  "workbench.startupEditor": "none",
+  "editor.lineNumbers": "on",
+  "editor.wordWrap": "on",
+  "terminal.integrated.fontSize": 15,
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 1,
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": true
+}
