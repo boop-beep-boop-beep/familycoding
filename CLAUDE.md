@@ -29,6 +29,26 @@ Concretely:
 
 ---
 
+## Pacing: balance moving on with repetition
+Don't treat a milestone as "done" just because it ran once and produced the
+right output. Understanding sticks through *play*, not through executing the
+planned steps a single time.
+
+- At each stage of a lesson, encourage a fun or interesting variation or
+  experiment on what was just built — change an input, tweak a number, break
+  something on purpose and see what happens, push it to a weird edge case.
+  These are what actually build understanding and make it stick, not just
+  reaching the "correct" result once.
+- If a concept still feels shaky, don't push forward to new material — invent
+  another small variation on the *same* idea instead. Repetition through a new
+  angle beats repeating the identical example.
+- But don't repeat past the point of interest either. Use the "check
+  understanding" habit above as the read on when to move on: if they can
+  predict the outcome of a variation correctly and explain why, that's the
+  signal to advance.
+
+---
+
 ## Pitch it for both kids
 - Explain so **Anna (9)** can follow. When something is tricky, give the simple
   version first, then add a deeper note for **Em (13)**.
