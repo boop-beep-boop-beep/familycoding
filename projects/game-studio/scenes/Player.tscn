@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_player"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_body"]
+radius = 0.4
+height = 1.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tunic"]
+albedo_color = Color(0.56, 0.38, 0.2, 1)
+roughness = 0.9
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
+radius = 0.4
+height = 1.6
+
+[sub_resource type="SphereMesh" id="SphereMesh_head"]
+radius = 0.27
+height = 0.54
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skin"]
+albedo_color = Color(0.82, 0.65, 0.5, 1)
+roughness = 0.9
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_camera"]
+radius = 0.2
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_player")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.8, 0)
+mesh = SubResource("CapsuleMesh_body")
+surface_material_override/0 = SubResource("StandardMaterial3D_tunic")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.8, 0)
+shape = SubResource("CapsuleShape3D_body")
+
+[node name="HeadMesh" type="MeshInstance3D" parent="."]
+position = Vector3(0, 1.5, -0.42)
+mesh = SubResource("SphereMesh_head")
+surface_material_override/0 = SubResource("StandardMaterial3D_skin")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+position = Vector3(0, 1.6, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+rotation_degrees = Vector3(0, 180, 0)
+shape = SubResource("SphereShape3D_camera")
+collision_mask = 1
+margin = 0.3
+spring_length = 2.3
+
+[node name="CameraPitch" type="Node3D" parent="CameraPivot/SpringArm3D"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D/CameraPitch"]
+position = Vector3(-0.5, 0.2, 0)
+rotation_degrees = Vector3(0, 180, 0)
+current = true
